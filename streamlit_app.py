@@ -4,6 +4,7 @@ Streamlit Interactive Dashboard & Simulation Prototype
 """
 
 import os
+from posixpath import realpath
 import time
 import sys
 import pandas as pd
@@ -11,6 +12,8 @@ import streamlit as st
 from datetime import datetime
 from pathlib import Path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+if realpath(os.path.dirname(__file__)) not in sys.path:
+    sys.path.append(realpath(os.path.dirname(__file__)))
 from core.config import settings
 from core.database import (
     init_db,
