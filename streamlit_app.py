@@ -14,8 +14,8 @@ from pathlib import Path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 if realpath(os.path.dirname(__file__)) not in sys.path:
     sys.path.append(realpath(os.path.dirname(__file__)))
-from core.config import settings
-from core.database import (
+from .core.config import settings
+from .core.database import (
     init_db,
     SessionLocal,
     get_database_metrics,
