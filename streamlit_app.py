@@ -3,12 +3,14 @@ CloudCare DR — Hospital Disaster Recovery Manager
 Streamlit Interactive Dashboard & Simulation Prototype
 """
 
+import os
 import time
+import sys
 import pandas as pd
 import streamlit as st
 from datetime import datetime
 from pathlib import Path
-
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from core.config import settings
 from core.database import (
     init_db,
